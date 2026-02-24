@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay warm and dry with ihuan Waterproof Winter Gloves for Men & Women. Touchscreen compatible, windproof, anti-slip palm. Perfect for snow, driving, cycling & cold weather. 4.4 stars from 10,000+ happy customers. Shop now!">
+    <meta name="keywords" content="waterproof winter gloves, touchscreen snow gloves, winter gloves men women, cold weather gloves, ihuan gloves, ski gloves, driving gloves winter, best winter gloves 2025">
+    <meta name="robots" content="index, follow">
+    <title>ihuan Waterproof Winter Gloves • Touchscreen Snow Gloves for Men & Women | Ultimate Cold Weather Protection</title>
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="ihuan Waterproof Winter Gloves - Stay Warm in Any Snowstorm">
+    <meta property="og:description" content="Lightweight, windproof, touchscreen gloves with fleece lining. Perfect for driving, cycling, skiing & more.">
+    <meta property="og:image" content="https://picsum.photos/id/1015/1200/630">
+    <meta property="og:url" content="https://yourdomain.com/winter-gloves">
+    <meta property="og:type" content="product">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://picsum.photos/id/1015/32/32" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --primary: #0f172a;
+            --accent: #22d3ee;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        
+        .snowflake {
+            position: absolute;
+            color: white;
+            font-size: 1.2em;
+            pointer-events: none;
+            animation: fall linear infinite;
+            z-index: 10;
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .tail-text {
+            background: linear-gradient(90deg, #22d3ee, #67e8f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        canvas#snowCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #22d3ee;
+        }
+    </style>
+</head>
+<body class="bg-[#0a1428] text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 bg-[#0a1428]/90 backdrop-blur-lg border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-snowflake text-3xl text-cyan-400"></i>
+                <span class="text-2xl font-bold tracking-tight">WinterGuard</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#features" class="hover:text-cyan-400 transition-colors">Features</a>
+                <a href="#gallery" class="hover:text-cyan-400 transition-colors">Gallery</a>
+                <a href="#video" class="hover:text-cyan-400 transition-colors">Video</a>
+                <a href="#reviews" class="hover:text-cyan-400 transition-colors">Reviews</a>
+            </div>
+            <a href="https://amzn.to/4tZzlps" target="_blank" 
+               class="bg-white text-[#0a1428] px-8 py-3.5 rounded-2xl font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-white transition-all active:scale-95">
+                <i class="fa-solid fa-cart-shopping"></i>
+                BUY ON AMAZON
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Snow Canvas -->
+        <canvas id="snowCanvas" class="absolute inset-0"></canvas>
+        
+        <!-- Background overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0a1428]/70 via-[#0a1428]/40 to-[#0a1428]"></div>
+        
+        <div class="absolute inset-0 bg-[url('https://picsum.photos/id/1015/1920/1080')] bg-cover bg-center"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-20 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl mb-6 border border-white/20">
+                <span class="text-xs uppercase tracking-[2px] font-semibold text-cyan-300">★ #1 Best Seller in Winter Gloves</span>
+            </div>
+            
+            <h1 class="hero-title text-6xl md:text-7xl lg:text-8xl font-bold leading-none mb-6">
+                HANDS NEVER<br>GET COLD AGAIN
+            </h1>
+            
+            <p class="text-2xl md:text-3xl text-cyan-100 max-w-2xl mx-auto mb-10">
+                ihuan Waterproof Touchscreen Winter Gloves<br>
+                <span class="text-cyan-400 font-semibold">for Men &amp; Women • Snow • Driving • Cycling</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://amzn.to/4tZzlps" target="_blank"
+                   class="group bg-white hover:bg-cyan-400 text-[#0a1428] hover:text-white font-bold text-xl px-12 py-6 rounded-3xl flex items-center gap-4 transition-all duration-300 active:scale-95">
+                    <span>GET YOURS FOR ONLY $15.99</span>
+                    <i class="fa-solid fa-arrow-right group-active:rotate-45 transition-transform"></i>
+                </a>
+                
+                <a href="#video" 
+                   class="border-2 border-white/70 hover:border-cyan-400 px-10 py-6 rounded-3xl text-lg font-medium flex items-center gap-3 transition-all">
+                    <i class="fa-solid fa-play"></i>
+                    Watch in Action
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center items-center gap-8 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <span class="font-semibold">4.4/5 • 10,743 Reviews</span>
+                </div>
+                <div class="h-5 w-px bg-white/30"></div>
+                <div class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+                    <span>1-Year Warranty</span>
+                </div>
+            </div>
+            
+            <!-- Floating product image -->
+            <div class="hidden lg:block absolute bottom-12 right-12 w-80 rotate-12 shadow-2xl">
+                <img src="https://picsum.photos/id/201/600/600" alt="ihuan Waterproof Winter Gloves Black Touchscreen" 
+                     class="w-full rounded-3xl border-8 border-white/30 shadow-2xl">
+                <div class="absolute -top-4 -right-4 bg-white text-[#0a1428] text-xs font-bold px-5 py-2 rounded-2xl rotate-12 shadow">
+                    TOUCHSCREEN READY
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll prompt -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs tracking-widest">
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white/50 to-transparent"></div>
+            SCROLL TO EXPLORE
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="bg-[#0f1c3a] py-6 border-b border-cyan-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-10 text-sm items-center opacity-75">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-truck text-cyan-400"></i>
+                <span>Free Shipping on Orders $25+</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-rotate text-cyan-400"></i>
+                <span>30-Day Money Back</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-lock text-cyan-400"></i>
+                <span>Secure Checkout</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-yellow-400">★★★★★</span>
+                <span>Over 10,000 Happy Hands</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-24 bg-[#0a1428]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block px-6 py-2 bg-cyan-500/10 text-cyan-400 text-sm font-semibold tracking-widest rounded-3xl mb-4">ENGINEERED FOR EXTREME COLD</span>
+                <h2 class="section-header text-5xl font-bold text-white">Why Thousands Choose ihuan Every Winter</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="product-card bg-[#13223f] p-8 rounded-3xl border border-cyan-500/10 group">
+                    <div class="h-14 w-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">❄️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Waterproof + Windproof</h3>
+                    <p class="text-gray-300 leading-relaxed">Special TPU membrane blocks snow, rain and freezing wind. Keep your hands dry even in heavy snowfall.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="product-card bg-[#13223f] p-8 rounded-3xl border border-cyan-500/10 group">
+                    <div class="h-14 w-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">📱</div>
+                    <h3 class="text-2xl font-semibold mb-3">Full Touchscreen Fingers</h3>
+                    <p class="text-gray-300 leading-relaxed">Text, scroll and take photos without taking your gloves off. Works perfectly with iPhone & Android.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="product-card bg-[#13223f] p-8 rounded-3xl border border-cyan-500/10 group">
+                    <div class="h-14 w-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">🛡️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Anti-Slip Palm Grip</h3>
+                    <p class="text-gray-300 leading-relaxed">Silicone diamond pattern on palm gives unbeatable grip on steering wheel, ski poles or phone.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="product-card bg-[#13223f] p-8 rounded-3xl border border-cyan-500/10 group">
+                    <div class="h-14 w-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">🔥</div>
+                    <h3 class="text-2xl font-semibold mb-3">Ultra-Warm Fleece Lining</h3>
+                    <p class="text-gray-300 leading-relaxed">Thick, soft polar fleece keeps hands warm down to 20°F (-7°C). Lightweight & not bulky.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="product-card bg-[#13223f] p-8 rounded-3xl border border-cyan-500/10 group">
+                    <div class="h-14 w-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">🏃</div>
+                    <h3 class="text-2xl font-semibold mb-3">Perfect for Every Activity</h3>
+                    <p class="text-gray-300 leading-relaxed">Driving • Cycling • Running • Skiing • Shoveling snow • Dog walking • Hiking</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="product-card bg-[#13223f] p-8 rounded-3xl border border-cyan-500/10 group">
+                    <div class="h-14 w-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">🌍</div>
+                    <h3 class="text-2xl font-semibold mb-3">Unisex • Multiple Sizes</h3>
+                    <p class="text-gray-300 leading-relaxed">XS to XXL for perfect fit. Available in Black, Gray & Navy. Machine washable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-24 bg-[#13223f]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold">Real People • Real Cold • Real Results</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <img src="https://picsum.photos/id/201/600/600" alt="ihuan black waterproof winter gloves touchscreen fingers" 
+                     class="rounded-3xl w-full aspect-square object-cover hover:scale-105 transition-transform duration-500">
+                <img src="https://picsum.photos/id/251/600/600" alt="woman wearing ihuan winter gloves making snowball in snow" 
+                     class="rounded-3xl w-full aspect-square object-cover hover:scale-105 transition-transform duration-500">
+                <img src="https://picsum.photos/id/1016/600/600" alt="man driving car with ihuan touchscreen winter gloves" 
+                     class="rounded-3xl w-full aspect-square object-cover hover:scale-105 transition-transform duration-500">
+                <img src="https://picsum.photos/id/870/600/600" alt="close up of ihuan gloves anti-slip palm grip" 
+                     class="rounded-3xl w-full aspect-square object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="py-24 bg-[#0a1428]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-cyan-400 text-sm font-semibold tracking-widest">SEE THEM IN ACTION</span>
+                <h2 class="text-5xl font-bold mt-3">Watch How They Perform in Real Snow</h2>
+            </div>
+            
+            <div class="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl border border-cyan-500/30">
+                <iframe width="100%" height="100%" 
+                        src="https://www.youtube.com/embed/r6VkCdQQdG0" 
+                        title="Snow Falling Winter Gloves Demo" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+            <p class="text-center text-gray-400 mt-6 text-sm">Real customer footage • Tested in -10°C / 14°F</p>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="py-24 bg-[#13223f]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold">What Real Customers Are Saying</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#0a1428] p-8 rounded-3xl">
+                    <div class="flex text-yellow-400 mb-6">★★★★★</div>
+                    <p class="italic text-gray-200">"These are the BEST winter gloves I've ever owned. I can use my phone without freezing my fingers off. Survived a full day of snowboarding!"</p>
+                    <div class="mt-8 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-600 rounded-full"></div>
+                        <div>
+                            <div class="font-semibold">Sarah K.</div>
+                            <div class="text-xs text-gray-500">Verified Buyer • Colorado</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#0a1428] p-8 rounded-3xl">
+                    <div class="flex text-yellow-400 mb-6">★★★★☆</div>
+                    <p class="italic text-gray-200">"Super warm and the grip on the steering wheel is amazing. Drove 8 hours in a snowstorm and my hands stayed toasty. Highly recommend!"</p>
+                    <div class="mt-8 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-600 rounded-full"></div>
+                        <div>
+                            <div class="font-semibold">Michael T.</div>
+                            <div class="text-xs text-gray-500">Verified Buyer • Minnesota</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#0a1428] p-8 rounded-3xl">
+                    <div class="flex text-yellow-400 mb-6">★★★★★</div>
+                    <p class="italic text-gray-200">"Bought for my husband and he won't take them off. Touchscreen works perfectly and they look stylish too. Best $16 I've spent all winter!"</p>
+                    <div class="mt-8 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-600 rounded-full"></div>
+                        <div>
+                            <div class="font-semibold">Elena M.</div>
+                            <div class="text-xs text-gray-500">Verified Buyer • New York</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-32 bg-gradient-to-br from-[#0a1428] via-cyan-950 to-[#0a1428] relative overflow-hidden">
+        <canvas id="snowCanvas2" class="absolute inset-0"></canvas>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="text-6xl mb-8">❄️</div>
+            <h2 class="text-6xl font-bold leading-tight mb-8">Don't Let Cold Hands Ruin Your Winter</h2>
+            <p class="text-2xl text-cyan-100 mb-12 max-w-lg mx-auto">Join 10,000+ happy customers who finally found gloves that actually work.</p>
+            
+            <a href="https://amzn.to/4tZzlps" target="_blank"
+               class="inline-block bg-white text-[#0a1428] font-bold text-2xl px-16 py-8 rounded-3xl hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-cyan-500/50">
+                BUY NOW ON AMAZON - ONLY $15.99
+            </a>
+            
+            <div class="mt-12 text-sm text-gray-400 flex items-center justify-center gap-8">
+                <div>✅ In Stock • Ships Today</div>
+                <div>✅ 1-Year Warranty</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-[#0a1428]">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <details class="bg-[#13223f] rounded-3xl p-8 group">
+                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                        Are these gloves truly waterproof?
+                        <i class="fa-solid fa-plus group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-6 text-gray-300">Yes! They have a built-in TPU waterproof membrane and sealed seams. Perfect for light to moderate snow and rain (not for submersion).</p>
+                </details>
+                
+                <details class="bg-[#13223f] rounded-3xl p-8 group">
+                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                        Do they work with my iPhone?
+                        <i class="fa-solid fa-plus group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-6 text-gray-300">Absolutely. The thumb and index finger have conductive touchscreen material that works flawlessly with all smartphones.</p>
+                </details>
+                
+                <details class="bg-[#13223f] rounded-3xl p-8 group">
+                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                        What sizes are available?
+                        <i class="fa-solid fa-plus group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-6 text-gray-300">XS, S, M, L, XL, XXL. Check the size chart on the Amazon page for perfect fit.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-cyan-900">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-400">
+            <p class="mb-4">This is an affiliate page. We may earn a small commission at no extra cost to you.</p>
+            <p>© 2026 WinterGuard • All Rights Reserved • <a href="#" class="hover:text-white">Privacy</a> • <a href="#" class="hover:text-white">Terms</a></p>
+            <div class="mt-8 flex justify-center gap-6 text-2xl">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        
+        // Snow Canvas 1 (Hero)
+        function createSnow(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+            
+            const particles = [];
+            
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height - canvas.height;
+                    this.size = Math.random() * 5 + 2;
+                    this.speed = Math.random() * 3 + 1;
+                    this.opacity = Math.random() * 0.8 + 0.4;
+                    this.angle = Math.random() * Math.PI * 2;
+                    this.swing = Math.random() * 0.5 + 0.2;
+                }
+                
+                update() {
+                    this.y += this.speed;
+                    this.x += Math.sin(this.angle) * this.swing;
+                    this.angle += 0.02;
+                    
+                    if (this.y > canvas.height) {
+                        this.y = -10;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+                
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = '#e0f2fe';
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = '#67e8f9';
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+            
+            for (let i = 0; i < 180; i++) {
+                particles.push(new Particle());
+            }
+            
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+        
+        // Create snow for both canvases
+        createSnow('snowCanvas');
+        createSnow('snowCanvas2');
+        
+        // Simple accordion behavior already handled by <details>
+        
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Keyboard accessibility for buy buttons
+        console.log('%cUltra responsive winter gloves landing page ready! ❄️', 'color:#22d3ee; font-size:14px');
+    </script>
+</body>
+</html>
